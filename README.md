@@ -1,5 +1,5 @@
 # Global-Terrorism-Database-EDA
-![Screenshot 2022-03-27 211425](https://user-images.githubusercontent.com/101349870/189537471-5cf1ed7f-a0c5-4a0b-a96f-9c88d77eeb30.jpg)
+             ![Screenshot 2022-03-27 211425](https://user-images.githubusercontent.com/101349870/189537471-5cf1ed7f-a0c5-4a0b-a96f-9c88d77eeb30.jpg)
 
 # Summary:
 
