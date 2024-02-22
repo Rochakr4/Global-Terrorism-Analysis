@@ -48,3 +48,24 @@ It is to be noted that the analysis mentioned here in the documentation are a br
 Use cases of this EDA can be extended to educational and academical use and historical pattern analysis. 
 Given the size of the data set, the possibilities to continue the analysis on other fields in the dataset are quite vast. 
 Future scopes of the project may include prediction and prevention of such attacks to a good extent by integration of Machine Learning and Artificial Intelligence elements.
+
+Certainly, let's recheck the equation. For an ARIMA(2,2,2) model with exogenous variables, the forecast equation is:
+
+\[ Y_{\text{{forecast}}} = \mu + \phi_1 (Y_{t-1} - \mu) + \phi_2 (Y_{t-2} - \mu) + (1 - B)^2 \epsilon_t + (X_{1,t} - \gamma_1) + \theta_1 (X_{1,t-1} - \gamma_1) + \theta_2 (X_{1,t-2} - \gamma_1) + (X_{2,t} - \gamma_2) + \phi_1 (X_{2,t-1} - \gamma_2) + \phi_2 (X_{2,t-2} - \gamma_2) \]
+
+Here are the steps involved in forecasting:
+
+1. **Start with the last observed value:** \(Y_{t}\) is the last observed value of your time series.
+
+2. **Calculate the first difference:** \(\Delta Y_{t} = Y_{t} - Y_{t-1}\).
+
+3. **Calculate the second difference:** \(\Delta^2 Y_{t} = \Delta Y_{t} - \Delta Y_{t-1}\).
+
+4. **Forecast the next value:** 
+   \[ Y_{\text{{forecast}}} = \mu + \phi_1 \Delta Y_{t} + \phi_2 \Delta^2 Y_{t} + (X_{1,\text{{future}}} - \gamma_1) + \theta_1 (X_{1,\text{{future-1}}} - \gamma_1) + \theta_2 (X_{1,\text{{future-2}}} - \gamma_1) + (X_{2,\text{{future}}} - \gamma_2) + \phi_1 (X_{2,\text{{future-1}}} - \gamma_2) + \phi_2 (X_{2,\text{{future-2}}} - \gamma_2) \]
+
+   Here, \(X_{1,\text{{future}}}\) and \(X_{2,\text{{future}}}\) are the values of the exogenous variables for the future period.
+
+5. **Repeat the differencing and forecasting steps for future periods.**
+
+Make sure to use the actual coefficient values (\(\mu, \phi_1, \phi_2, \gamma_1, \gamma_2, \theta_1, \theta_2\)) and exogenous variable values for accurate forecasting.
